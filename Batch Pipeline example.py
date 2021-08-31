@@ -40,12 +40,12 @@ def run(argv=None, save_main_session=True):
   parser.add_argument(
       '--input',
       dest='input',
-      default='C:/path/surya/generated_batch_data.txt',
+      default='C:/path/suryavamsi/generated_batch_data.txt',
       help='Input file to process.')
   parser.add_argument(
       '--output',
       dest='output',
-      default='gs://qwiklabs-gcp-01-26f7dc4bbd77/out',
+      default='gs://<your project>/out',
       help='Output file to write results to.')
   known_args, pipeline_args = parser.parse_known_args(argv)
 
@@ -81,7 +81,7 @@ def run(argv=None, save_main_session=True):
   
     table_id = 'test_table'
     dataset_id = 'suryavamsi'
-    project_id = 'qwiklabs-gcp-01-26f7dc4bbd77'
+    project_id = '<your project name>'
     table_schema = ('AGENCY:STRING,TRANSACTION_DATE:STRING,TRANSACTION_AMOUNT:NUMERIC')
 
     # BQ_source = beam.io.BigQuerySource(query = "SELECT 'SURYAVAMSI' as surya", use_standard_sql=True)
